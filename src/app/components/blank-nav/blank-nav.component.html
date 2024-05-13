@@ -1,0 +1,62 @@
+<nav
+    class="navbar navbar-expand-md navbar-light bg-light fixed-top"
+>
+    <div class="container">
+        <a class="navbar-brand" href="">
+            <img src="../../../assets/images/freshcart-logo.svg" alt="">
+        </a>
+        <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/home']" routerLinkActive="link-active" >Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/products']" routerLinkActive="link-active" >products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/categories']" routerLinkActive="link-active" >categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/brands']" routerLinkActive="link-active" >brands</a>
+                </li>
+           
+           
+            </ul>
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0 align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link position-relative" [routerLink]="['/cart']">
+                      
+                        <i class="fa-solid fa-cart-shopping text-main fa-2x"></i>
+                        <span class="badge bg-info position-absolute top-0 end-0">{{cartnum}}</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a href="">  <i class="fab fa-instagram me-3 text-black"></i></a>
+                   <a href=""><i class="fab fa-facebook me-3 text-black"></i></a> 
+                  <a href=""><i class="fab fa-tiktok me-3 text-black"></i></a> 
+                  <a href="">  <i class="fab fa-twitter me-3 text-black"></i></a>
+                 <a href="">  <i class="fab fa-linkedin me-3 text-black"></i></a>
+                   <a href="">  <i class="fab fa-youtube me-3 text-black"></i></a>
+                </li>
+                <li class="nav-item">
+                  <span role="button" (click)="signout()"> signout</span>
+                </li>
+           
+           
+            </ul>
+        
+        </div>
+    </div>
+</nav>
+

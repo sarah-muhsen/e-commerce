@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+$main-color:#109E16;
+$light-color:#E2E4E5;
+$shadow:rgba(145,158,171,0.2) 0px 2px 4px -1px,
+rgba(145,158,171,0.14) 0px 4px 5px 0px,
+rgba(145,158,171,0.12) 0px 1px 10px 0px;
+$rating-color:#DAA520;
+$main-transistion:0.8s;
+$font-family: "Rubik", sans-serif;
+body{
+    font-family:$font-family;
+}
+.text-main{
+    color:$main-color
+}
+.bg-main-light{
+    background-color:$light-color;
+}
+.bg-main{
+    background-color: $main-color;
+    
+}
+.rating-color{
+    color:$rating-color;
+}
+.font-sm{
+    font-size: 11px;
+}
+.main-btn{
+    background-color:#109E16;
+    color:#fff;
+    border-radius:5px;
+    border:none;
+    cursor:pointer;
+    padding:4px 8px;
+    // &:disabled{
+    //     background-color:#FFFFFF ;
+    //     color:#6E7174;
+    //     border:solid 2px #6E7174;
+    //     cursor:not-allowed;
+
+    // }
+}
+.product{
+    border:1px solid $main-color;
+    border: radius 5px;
+    padding:4px;
+    box-shadow:$shadow;
+}
+.product:hover{
+    box-shadow:0 0 10px var(--main-color);
+
+}
+.link-active{
+    background-color: $main-color !important;
+    color:#FFFFFF !important;
+    padding:5px !important;
+    border-radius:5px !important;
+}
+::-webkit-scrollbar{
+    width:10px;
+}
+::-webkit-scrollbar-track{
+    background-color:$light-color;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $main-color;
+    border-radius: 10px;
+}
+
+

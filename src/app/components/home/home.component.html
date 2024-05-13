@@ -1,0 +1,62 @@
+<section>
+    <div class="row g-0">
+        <div class="col-md-9">
+            <owl-carousel-o [options]="minslider">
+                <ng-template carouselSlide>
+                    <img src="./assets/images/main-slider-1.jpeg" height="400" alt="slide 1">
+                </ng-template>  
+                <ng-template carouselSlide>
+                    <img src="./assets/images/main-slider-2.jpeg" height="400"alt="slide 1">
+                </ng-template> 
+                <ng-template carouselSlide>
+                    <img src="./assets/images/main-slider-3.jpeg" height="400"alt="slide 1">
+                </ng-template> 
+               
+              </owl-carousel-o>
+        </div>
+        <div class="col-md-3">
+<img src="../../../assets/images/slide-1.jpeg" class="w-100" height="200" alt="">
+<img src="../../../assets/images/slide-2.jpeg" height="200" class="w-100" alt="">
+        </div>
+    </div>
+</section>
+<section class="my-5">
+    <h3>popular catgories</h3>
+    <owl-carousel-o [options]="customOptions">
+
+        <ng-container *ngFor="let slide of category">
+          <ng-template carouselSlide >
+            <img [src]="slide.image" height="200" [alt]="slide.name" [title]="slide.name">
+          </ng-template>
+        </ng-container>
+    
+      </owl-carousel-o>
+</section>
+<section *ngIf="products.length>0">
+    <h3>Popular Products</h3>
+   <div class="row g-4">
+    <div *ngFor="let product of products | slice:0:17" class="col-sm-6 col-md-4 col-lg-3 col-xl-2 h-100">
+        <div role="button" class="product">
+      <header [routerLink]="['/details',product._id]">
+        <img [src]="product.imageCover" class="w-100"  [alt]="product.title" [title]="product.title">
+        <h3 class="h6 small">{{product.title |cuttext:3}}</h3>
+        <h4 class="h6">{{product.category.name}}</h4>
+        <div class="d-flex justify-content-between align-items-center small">
+            <span>{{product.price |currency:"E£"}}</span>
+            <span>
+                <i class="fas fa-star rating-color"></i>
+                {{product.ratingsAverage}}
+            </span>
+
+        </div>
+      </header>
+      <footer>
+        <button (click)="addproduct(product._id, addbtn)" #addbtn class="main-btn w-100">Add To Product</button>
+      </footer>
+        </div>
+
+    </div>
+
+   </div>
+
+</section>
